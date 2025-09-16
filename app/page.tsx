@@ -24,6 +24,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import imageLogo from "@/assests/imageLogo.jpg"
+import about from "@/assests/about.jpg"
 
 // Custom hook for intersection observer
 function useIntersectionObserver(options = {}) {
@@ -168,10 +169,10 @@ export default function DigitalMarketingPortfolio() {
 
               <AnimatedText delay={400}>
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight hover:scale-105 transition-transform duration-500">
-                  Grow Your Business with
+                
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
                     {" "}
-                    Digital Excellence
+                    Digital Marketing Specialist | Scale Your Business with Speed & Success
                   </span>
                 </h1>
               </AnimatedText>
@@ -189,7 +190,7 @@ export default function DigitalMarketingPortfolio() {
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-110 hover:shadow-2xl transition-all duration-300 group"
                   >
-                    View My Work
+                    Let’s connect
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                   <Button
@@ -206,10 +207,10 @@ export default function DigitalMarketingPortfolio() {
               {/* Enhanced Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { number: "150+", label: "Projects Completed" },
-                  { number: "300%", label: "Average ROI" },
-                  { number: "50+", label: "Happy Clients" },
-                  { number: "5", label: "Years Experience" },
+                  { number: "50+", label: "Projects completed across healthcare, NGOs, and small businesses" },
+                  { number: "180%", label: "Average ROI on digital marketing campaigns" },
+                  { number: "20+", label: "Happy Clients" },
+                  { number: "5", label: "Years of experience in SEO, SEM, Social Media & Email Marketing" },
                 ].map((stat, index) => (
                   <AnimatedText key={index} delay={1000 + index * 100}>
                     <div className="text-center group cursor-pointer hover:scale-110 transition-all duration-300 p-4 rounded-lg hover:bg-blue-50">
@@ -228,7 +229,7 @@ export default function DigitalMarketingPortfolio() {
             {/* Second Portion - User Photo */}
             <div className="lg:col-span-1">
                 <div className="relative group">
-                  <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-6 h-[400px] flex items-center justify-center group-hover:scale-105 transition-transform duration-500 blue-card blue-glow">
+                  <div className="from-blue-100 to-purple-100 rounded-2xl p-6 h-[400px] flex items-center justify-center group-hover:scale-105 transition-transform duration-500 blue-card blue-glow">
                     <Image
                       src={imageLogo}
                       alt="Mahima - Digital Marketing Professional"
@@ -287,7 +288,7 @@ export default function DigitalMarketingPortfolio() {
                 title: "Email Marketing",
                 description: "Create personalized email campaigns that convert prospects into loyal customers.",
                 color: "green",
-                features: ["Campaign Design", "Automation Setup", "A/B Testing"],
+                features: ["Campaign Design", "Automation Setup", "Audience Segmentation"],
                },
               // {
               //   icon: BarChart3,
@@ -370,15 +371,25 @@ export default function DigitalMarketingPortfolio() {
     </div>
 </div>
 <div className="flex justify-center">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-6xl">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center max-w-6xl">
     {[
       {
-        title: "SaaS Lead Generation",
+        title: "JIPSI",
         subtitle: "B2B Software Company",
         gradient: "from-green-400 to-green-600",
       },
       {
-        title: "Local Restaurant Chain",
+        title: "JPM — NGO",
+        subtitle: "Multi-location Marketing",
+        gradient: "from-purple-400 to-purple-600",
+      },
+      {
+        title: "SunehraDhaga",
+        subtitle: "Multi-location Marketing",
+        gradient: "from-purple-400 to-purple-600",
+      },
+      {
+        title: "Landmark Design Studio",
         subtitle: "Multi-location Marketing",
         gradient: "from-purple-400 to-purple-600",
       },
@@ -390,7 +401,7 @@ export default function DigitalMarketingPortfolio() {
           >
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
             <Image
-              src="/placeholder.svg?height=200&width=400"
+              src="../assests/c1.png"
               alt={project.title}
               width={400}
               height={200}
@@ -443,7 +454,7 @@ export default function DigitalMarketingPortfolio() {
                 </p>
               </AnimatedText>
 
-              <div className="grid grid-cols-2 gap-6 mb-8">
+              {/* <div className="grid grid-cols-2 gap-6 mb-8">
                 <AnimatedText delay={800}>
                   <div className="hover:translate-x-2 transition-transform duration-300">
                     <h4 className="font-semibold text-gray-800 mb-2">Certifications</h4>
@@ -478,24 +489,24 @@ export default function DigitalMarketingPortfolio() {
                     </ul>
                   </div>
                 </AnimatedText>
-              </div>
+              </div> */}
 
-              <AnimatedText delay={1200}>
+              {/* <AnimatedText delay={1200}>
                 <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-110 hover:shadow-lg transition-all duration-300">
                   Download Resume
                 </Button>
-              </AnimatedText>
+              </AnimatedText> */}
             </div>
 
             <AnimatedText delay={400}>
               <div className="relative group">
-                <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 h-96 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                <div className="from-blue-100 to-purple-100 rounded-2xl p-8 h-96 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                   <Image
-                    src={imageLogo}
+                    src={about}
                     alt="Digital Marketing Professional"
-                    width={400}
-                    height={400}
-                    className="rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500"
+                    width={700}
+                    height={700}
+                    className="rounded-xl shadow-lg group-hover:scale-100 transition-transform duration-500"
                   />
                 </div>
 
@@ -526,7 +537,7 @@ export default function DigitalMarketingPortfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-gray-50 transition-colors duration-500">
+      {/* <section id="contact" className="py-16 px-4 bg-gray-50 transition-colors duration-500">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <AnimatedText>
@@ -659,7 +670,7 @@ export default function DigitalMarketingPortfolio() {
             </AnimatedText>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Enhanced Footer */}
       <footer className="bg-gray-800 text-white py-12 px-4 transition-colors duration-500">
