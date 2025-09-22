@@ -149,20 +149,15 @@ export default function DigitalMarketingPortfolio() {
               </AnimatedText>
             ))}
           </div>
-         <div className="flex items-center space-x-4">
-  <AnimatedText delay={500}>
-    <a
-      href="https://chat.whatsapp.com/BXmJH6ZiMWZ2mZzL8JWKpx?mode=ems_wa_t"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-lg transition-all duration-300">
-        Get Started
-      </Button>
-    </a>
-  </AnimatedText>
-</div>
-
+          <div className="flex items-center space-x-4">
+            <AnimatedText delay={500}>
+              <a href="https://wa.me/918422993462" target="_blank">
+                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                  Get Started
+                </Button>
+              </a>
+            </AnimatedText>
+          </div>
         </div>
       </nav>
 
@@ -210,11 +205,7 @@ export default function DigitalMarketingPortfolio() {
 
               <AnimatedText delay={800}>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a
-                    href="https://chat.whatsapp.com/BXmJH6ZiMWZ2mZzL8JWKpx?mode=ems_wa_t"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href="https://wa.me/918422993462" target="_blank">
                     <Button
                       size="lg"
                       className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-110 hover:shadow-2xl transition-all duration-300 group"
@@ -271,16 +262,20 @@ export default function DigitalMarketingPortfolio() {
             </div>
 
             {/* Second Portion - User Photo */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1" style={{ marginTop: "-120px" }}>
               <div className="relative group">
-                <div className="from-blue-100 to-purple-100 rounded-2xl p-6 h-[400px] flex items-center justify-center blue-card blue-glow">
-                  <Image
-                    src={imageLogo}
-                    alt="Mahima - Digital Marketing Professional"
-                    width={350}
-                    height={350}
-                    className="rounded-xl shadow-lg "
-                  />
+                <div
+                  className="from-blue-100 to-purple-100 rounded-2xl p-6 flex items-start justify-center blue-card blue-glow"
+                  style={{ height: "400px" }}
+                >
+                  <div className="relative w-[350px] h-[350px] mt-[10px]">
+                    <Image
+                      src={imageLogo}
+                      alt="Mahima - Digital Marketing Professional"
+                      fill
+                      className="rounded-xl shadow-lg object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
