@@ -1,11 +1,17 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   ArrowRight,
   // BarChart3,
@@ -21,38 +27,44 @@ import {
   Star,
   CheckCircle,
   Loader2,
-} from "lucide-react"
-import Image from "next/image"
-import imageLogo from "@/assests/imageLogo.jpg"
-import about from "@/assests/about.jpg"
+} from "lucide-react";
+import Image from "next/image";
+import imageLogo from "@/assests/imageLogo.jpg";
+import about from "@/assests/about.jpg";
+import jipsi from "@/assests/c1.jpg";
+import sunheraDhaga from "@/assests/c2.jpg";
+import JPM from "@/assests/c3.jpg";
+import landmark from "@/assests/c4.jpg";
 
 // Custom hook for intersection observer
 function useIntersectionObserver(options = {}) {
-  const [isIntersecting, setIsIntersecting] = useState(false)
-  const ref = useRef(null)
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsIntersecting(entry.isIntersecting)
-    }, options)
+      setIsIntersecting(entry.isIntersecting);
+    }, options);
 
     if (ref.current) {
-      observer.observe(ref.current)
+      observer.observe(ref.current);
     }
 
     return () => {
       if (ref.current) {
-        observer.unobserve(ref.current)
+        observer.unobserve(ref.current);
       }
-    }
-  }, [options])
+    };
+  }, [options]);
 
-  return [ref, isIntersecting]
+  return [ref, isIntersecting];
 }
 
 // Loading skeleton component
 function LoadingSkeleton({ className = "" }) {
-  return <div className={`animate-pulse bg-gray-200 rounded ${className}`}></div>
+  return (
+    <div className={`animate-pulse bg-gray-200 rounded ${className}`}></div>
+  );
 }
 
 // Animated text component
@@ -60,7 +72,7 @@ function AnimatedText({ children, className = "", delay = 0 }) {
   const [ref, isIntersecting] = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: "0px 0px -100px 0px",
-  })
+  });
 
   return (
     <div
@@ -72,24 +84,24 @@ function AnimatedText({ children, className = "", delay = 0 }) {
     >
       {children}
     </div>
-  )
+  );
 }
 
 export default function DigitalMarketingPortfolio() {
-  const [scrollY, setScrollY] = useState(0)
-  const [isLoading, setIsLoading] = useState(true)
+  const [scrollY, setScrollY] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Handle mounting and dark mode
   useEffect(() => {
     // Simulate loading
-    setTimeout(() => setIsLoading(false), 2000)
-  }, [])
+    setTimeout(() => setIsLoading(false), 2000);
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Loading screen
   if (isLoading) {
@@ -100,14 +112,18 @@ export default function DigitalMarketingPortfolio() {
             <Loader2 className="w-16 h-16 animate-spin text-blue-600 mx-auto mb-4" />
             <div className="absolute inset-0 w-16 h-16 border-4 border-blue-200 rounded-full animate-pulse mx-auto"></div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Loading Portfolio</h2>
-          <p className="text-gray-600">Preparing your digital marketing experience...</p>
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            Loading Portfolio
+          </h2>
+          <p className="text-gray-600">
+            Preparing your digital marketing experience...
+          </p>
           <div className="mt-4 w-64 h-2 bg-gray-200 rounded-full mx-auto overflow-hidden">
             <div className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full animate-loading-bar"></div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -121,7 +137,7 @@ export default function DigitalMarketingPortfolio() {
             </div>
           </AnimatedText>
           <div className="hidden md:flex space-x-8">
-            {["Home", "Services", "Portfolio", "About", "Contact"].map((item, index) => (
+            {["Home", "Services", "Portfolio", "About"].map((item, index) => (
               <AnimatedText key={item} delay={index * 100}>
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -133,13 +149,20 @@ export default function DigitalMarketingPortfolio() {
               </AnimatedText>
             ))}
           </div>
-          <div className="flex items-center space-x-4">
-            <AnimatedText delay={500}>
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-lg transition-all duration-300">
-                Get Started
-              </Button>
-            </AnimatedText>
-          </div>
+         <div className="flex items-center space-x-4">
+  <AnimatedText delay={500}>
+    <a
+      href="https://chat.whatsapp.com/BXmJH6ZiMWZ2mZzL8JWKpx?mode=ems_wa_t"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-lg transition-all duration-300">
+        Get Started
+      </Button>
+    </a>
+  </AnimatedText>
+</div>
+
         </div>
       </nav>
 
@@ -169,48 +192,69 @@ export default function DigitalMarketingPortfolio() {
 
               <AnimatedText delay={400}>
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight hover:scale-105 transition-transform duration-500">
-                
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
                     {" "}
-                    Digital Marketing Specialist | Scale Your Business with Speed & Success
+                    Digital Marketing Specialist | Building Brands That Connect
+                    & Convert
                   </span>
                 </h1>
               </AnimatedText>
 
-              <AnimatedText delay={600}> 
+              <AnimatedText delay={600}>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-color duration-300">
-                  I help businesses scale their online presence through data-driven digital marketing strategies,
-                  creative campaigns, and measurable results.
+                  I help businesses scale their online presence through
+                  data-driven digital marketing strategies, creative campaigns,
+                  and measurable results.
                 </p>
               </AnimatedText>
 
               <AnimatedText delay={800}>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-110 hover:shadow-2xl transition-all duration-300 group"
+                  <a
+                    href="https://chat.whatsapp.com/BXmJH6ZiMWZ2mZzL8JWKpx?mode=ems_wa_t"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Let’s connect
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-gray-300 bg-transparent hover:bg-gray-100 hover:scale-110 hover:shadow-lg transition-all duration-300 group"
-                  >
-                    <Phone className="mr-2 w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                    Schedule a Call
-                  </Button>
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-110 hover:shadow-2xl transition-all duration-300 group"
+                    >
+                      Let’s connect
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </Button>
+                  </a>
+
+                  <a href="tel:+918422993462">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-gray-300 bg-transparent hover:bg-gray-100 hover:scale-110 hover:shadow-lg transition-all duration-300 group"
+                    >
+                      <Phone className="mr-2 w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
+                      Make a Call
+                    </Button>
+                  </a>
                 </div>
               </AnimatedText>
 
               {/* Enhanced Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { number: "50+", label: "Projects completed across healthcare, NGOs, and small businesses" },
-                  { number: "180%", label: "Average ROI on digital marketing campaigns" },
+                  {
+                    number: "50+",
+                    label:
+                      "Projects completed across healthcare, NGOs, and small businesses",
+                  },
+                  {
+                    number: "180%",
+                    label: "Average ROI on digital marketing campaigns",
+                  },
                   { number: "20+", label: "Happy Clients" },
-                  { number: "5", label: "Years of experience in SEO, SEM, Social Media & Email Marketing" },
+                  {
+                    number: "5",
+                    label:
+                      "Years of experience in SEO, SEM, Social Media & Email Marketing",
+                  },
                 ].map((stat, index) => (
                   <AnimatedText key={index} delay={1000 + index * 100}>
                     <div className="text-center group cursor-pointer hover:scale-110 transition-all duration-300 p-4 rounded-lg hover:bg-blue-50">
@@ -228,25 +272,27 @@ export default function DigitalMarketingPortfolio() {
 
             {/* Second Portion - User Photo */}
             <div className="lg:col-span-1">
-                <div className="relative group">
-                  <div className="from-blue-100 to-purple-100 rounded-2xl p-6 h-[400px] flex items-center justify-center group-hover:scale-105 transition-transform duration-500 blue-card blue-glow">
-                    <Image
-                      src={imageLogo}
-                      alt="Mahima - Digital Marketing Professional"
-                      width={350}
-                      height={350}
-                      className="rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 object-cover"
-                    />
-                  </div>
-
+              <div className="relative group">
+                <div className="from-blue-100 to-purple-100 rounded-2xl p-6 h-[400px] flex items-center justify-center blue-card blue-glow">
+                  <Image
+                    src={imageLogo}
+                    alt="Mahima - Digital Marketing Professional"
+                    width={350}
+                    height={350}
+                    className="rounded-xl shadow-lg "
+                  />
                 </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 px-4 bg-white transition-colors duration-500">
+      <section
+        id="services"
+        className="py-16 px-4 bg-white transition-colors duration-500"
+      >
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <AnimatedText>
@@ -261,7 +307,9 @@ export default function DigitalMarketingPortfolio() {
             </AnimatedText>
             <AnimatedText delay={400}>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-color duration-300">
-              Regular updates on Facebook, Instagram to maintain visibility. Meta ads, Instagram ads. get verified on google business. Make your own place in the market.
+                Regular updates on Facebook, Instagram to maintain visibility.
+                Meta ads, Instagram ads. get verified on google business. Make
+                your own place in the market.
               </p>
             </AnimatedText>
           </div>
@@ -274,22 +322,36 @@ export default function DigitalMarketingPortfolio() {
                 description:
                   "Boost your search rankings and drive qualified traffic with strategic SEO and paid search campaigns.",
                 color: "blue",
-                features: ["Keyword Research", "On-Page Optimization", "Google Ads Management"],
+                features: [
+                  "Keyword Research",
+                  "On-Page Optimization",
+                  "Google Ads Management",
+                ],
               },
               {
                 icon: Users,
                 title: "Social Media Marketing",
-                description: "Build brand awareness and engage your audience across all major social platforms.",
+                description:
+                  "Build brand awareness and engage your audience across all major social platforms.",
                 color: "purple",
-                features: ["Content Strategy", "Community Management", "Paid Social Campaigns"],
+                features: [
+                  "Content Strategy",
+                  "Community Management",
+                  "Paid Social Campaigns",
+                ],
               },
               {
                 icon: Mail,
                 title: "Email Marketing",
-                description: "Create personalized email campaigns that convert prospects into loyal customers.",
+                description:
+                  "Create personalized email campaigns that convert prospects into loyal customers.",
                 color: "green",
-                features: ["Campaign Design", "Automation Setup", "Audience Segmentation"],
-               },
+                features: [
+                  "Campaign Design",
+                  "Automation Setup",
+                  "Audience Segmentation",
+                ],
+              },
               // {
               //   icon: BarChart3,
               //   title: "Analytics & Reporting",
@@ -350,85 +412,104 @@ export default function DigitalMarketingPortfolio() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-16 px-4 bg-gray-50 transition-colors duration-500">
-  <div className="container mx-auto">
-    <div className="text-center mb-16">
-      <AnimatedText>
-        <Badge className="mb-4 bg-purple-100 text-purple-800 hover:scale-105 transition-transform duration-300">
-          Portfolio
-        </Badge>
-      </AnimatedText>
-      <AnimatedText delay={200}>
-        <h2 className="text-4xl font-bold text-gray-800 mb-4 hover:scale-105 transition-transform duration-300">
-          Success Stories
-        </h2>
-      </AnimatedText>
-      <AnimatedText delay={400}>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Real results for real businesses across various industries
-        </p>
-      </AnimatedText>
-    </div>
-</div>
-<div className="flex justify-center">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center max-w-6xl">
-    {[
-      {
-        title: "JIPSI",
-        subtitle: "B2B Software Company",
-        gradient: "from-green-400 to-green-600",
-      },
-      {
-        title: "JPM — NGO",
-        subtitle: "Multi-location Marketing",
-        gradient: "from-purple-400 to-purple-600",
-      },
-      {
-        title: "SunehraDhaga",
-        subtitle: "Multi-location Marketing",
-        gradient: "from-purple-400 to-purple-600",
-      },
-      {
-        title: "Landmark Design Studio",
-        subtitle: "Multi-location Marketing",
-        gradient: "from-purple-400 to-purple-600",
-      },
-    ].map((project, index) => (
-      <AnimatedText key={index} delay={index * 200}>
-        <Card className="overflow-hidden hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 group cursor-pointer bg-white blue-card blue-glow">
-          <div
-            className={`aspect-video bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
-          >
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-            <Image
-              src="../assests/c1.png"
-              alt={project.title}
-              width={400}
-              height={200}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <section
+        id="portfolio"
+        className="py-16 px-4 bg-gray-50 transition-colors duration-500"
+      >
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <AnimatedText>
+              <Badge className="mb-4 bg-purple-100 text-purple-800 hover:scale-105 transition-transform duration-300">
+                Portfolio
+              </Badge>
+            </AnimatedText>
+            <AnimatedText delay={200}>
+              <h2 className="text-4xl font-bold text-gray-800 mb-4 hover:scale-105 transition-transform duration-300">
+                Success Stories
+              </h2>
+            </AnimatedText>
+            <AnimatedText delay={400}>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Real results for real businesses across various industries
+              </p>
+            </AnimatedText>
           </div>
-          <CardHeader>
-            <CardTitle className="text-lg text-gray-800 group-hover:text-blue-600 group-hover:drop-shadow-sm transition-all duration-300">
-              {project.title}
-            </CardTitle>
-            <CardDescription className="text-gray-600">
-              {project.subtitle}
-            </CardDescription>
-          </CardHeader>
-        </Card>
-      </AnimatedText>
-    ))}
-  </div>
-</div>
+        </div>
 
-  
-</section>
-
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center max-w-6xl">
+            {[
+              {
+                title: "JIPSI",
+                subtitle: "B2B Software Company",
+                gradient: "from-green-400 to-green-600",
+                image: jipsi,
+                link: "https://jipsi.com",
+              },
+              {
+                title: "JPM — NGO",
+                subtitle: "Multi-location Marketing",
+                gradient: "from-purple-400 to-purple-600",
+                image: JPM,
+                link: "https://jpm.org",
+              },
+              {
+                title: "SunehraDhaga",
+                subtitle: "Multi-location Marketing",
+                gradient: "from-purple-400 to-purple-600",
+                image: sunheraDhaga,
+                link: "https://sunehradhaga.in",
+              },
+              {
+                title: "Landmark Design Studio",
+                subtitle: "Multi-location Marketing",
+                gradient: "from-purple-400 to-purple-600",
+                image: landmark,
+                link: "https://landmarkdesignstudio.com",
+              },
+            ].map((project, index) => (
+              <AnimatedText key={index} delay={index * 200}>
+                {/* Wrap card in <a> for clickable link */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Card className="overflow-hidden hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 group cursor-pointer bg-white blue-card blue-glow">
+                    <div
+                      className={`aspect-video bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
+                    >
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={400}
+                        height={200}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-lg text-gray-800 group-hover:text-blue-600 group-hover:drop-shadow-sm transition-all duration-300">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600">
+                        {project.subtitle}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </a>
+              </AnimatedText>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 px-4 bg-white transition-colors duration-500">
+      <section
+        id="about"
+        className="py-16 px-4 bg-white transition-colors duration-500"
+      >
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="group">
@@ -443,14 +524,17 @@ export default function DigitalMarketingPortfolio() {
                 </h2>
               </AnimatedText>
               <AnimatedText delay={400}>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-color duration-300">
-                  With over 5 years of experience in digital marketing, I've helped businesses of all sizes achieve
-                  remarkable growth through strategic online marketing initiatives. My approach combines creativity with
-                  data-driven insights to deliver measurable results.
-                  <br></br>
-                  I specialize in creating comprehensive digital marketing strategies that not only increase visibility
-                  but also drive meaningful engagement and conversions. Every campaign is tailored to your unique
-                  business goals and target audience.
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-color duration-300">
+                  With over 5 years of experience in digital marketing, I've
+                  helped businesses of all sizes achieve remarkable growth
+                  through strategic online marketing initiatives. My approach
+                  combines creativity with data-driven insights to deliver
+                  measurable results.
+                  <br></br>I specialize in creating comprehensive digital
+                  marketing strategies that not only increase visibility but
+                  also drive meaningful engagement and conversions. Every
+                  campaign is tailored to your unique business goals and target
+                  audience.
                 </p>
               </AnimatedText>
 
@@ -700,10 +784,25 @@ export default function DigitalMarketingPortfolio() {
             {[
               {
                 title: "Services",
-                items: ["SEO & SEM", "Social Media Marketing", "Email Marketing", "Content Marketing"],
+                items: [
+                  "SEO & SEM",
+                  "Social Media Marketing",
+                  "Email Marketing",
+                  "Content Marketing",
+                ],
               },
-              { title: "Company", items: ["About", "Portfolio", "Blog", "Contact"] },
-              { title: "Contact Info", items: ["hello@digitalpro.com", "+1 (555) 123-4567", "New York, NY"] },
+              {
+                title: "Company",
+                items: ["About", "Portfolio", "Blog", "Contact"],
+              },
+              {
+                title: "Contact Info",
+                items: [
+                  "hello@digitalpro.com",
+                  "+1 (555) 123-4567",
+                  "New York, NY",
+                ],
+              },
             ].map((section, index) => (
               <AnimatedText key={index} delay={200 + index * 100}>
                 <div className="hover:translate-y-2 transition-transform duration-300">
@@ -735,5 +834,5 @@ export default function DigitalMarketingPortfolio() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
