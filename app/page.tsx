@@ -133,7 +133,7 @@ export default function DigitalMarketingPortfolio() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <AnimatedText>
             <div className="text-2xl font-bold text-gray-800 hover:scale-105 transition-transform duration-300 cursor-pointer">
-              Mahima
+              Mahima Bansal
             </div>
           </AnimatedText>
           <div className="hidden md:flex space-x-8">
@@ -262,21 +262,17 @@ export default function DigitalMarketingPortfolio() {
             </div>
 
             {/* Second Portion - User Photo */}
-            <div className="lg:col-span-1" style={{ marginTop: "-120px" }}>
-              <div className="relative group">
-                <div
-                  className="from-blue-100 to-purple-100 rounded-2xl p-6 flex items-start justify-center blue-card blue-glow"
-                  style={{ height: "400px" }}
-                >
-                  <div className="relative w-[350px] h-[350px] mt-[10px]">
-                    <Image
-                      src={imageLogo}
-                      alt="Mahima - Digital Marketing Professional"
-                      fill
-                      className="rounded-xl shadow-lg object-contain"
-                    />
-                  </div>
-                </div>
+            <div
+              className="from-blue-100 to-purple-100 rounded-2xl p-6 flex items-start justify-center blue-card blue-glow"
+              style={{ height: "400px", marginTop: "-120px" }}
+            >
+              <div className="relative w-[350px] h-[350px] mt-[10px]">
+                <Image
+                  src={imageLogo}
+                  alt="Mahima - Digital Marketing Professional"
+                  fill
+                  className="rounded-xl shadow-lg object-contain"
+                />
               </div>
             </div>
           </div>
@@ -758,7 +754,7 @@ export default function DigitalMarketingPortfolio() {
             <AnimatedText>
               <div className="hover:translate-y-2 transition-transform duration-300">
                 <div className="text-2xl font-bold mb-4 hover:scale-110 transition-transform duration-300 cursor-pointer">
-                  Mahima
+                  Mahima Bansal
                 </div>
                 <p className="text-gray-400 mb-4 hover:text-gray-300 transition-colors duration-300">
                   Helping businesses grow through strategic digital marketing.
@@ -793,7 +789,7 @@ export default function DigitalMarketingPortfolio() {
               {
                 title: "Contact Info",
                 items: [
-                  "hello@digitalpro.com",
+                  "bansal.mahima@gmail.com",
                   "+1 (555) 123-4567",
                   "New York, NY",
                 ],
