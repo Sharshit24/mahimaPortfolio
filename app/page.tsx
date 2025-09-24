@@ -186,12 +186,11 @@ export default function DigitalMarketingPortfolio() {
               </AnimatedText>
 
               <AnimatedText delay={400}>
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight hover:scale-105 transition-transform duration-500">
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
-                    {" "}
                     Digital Marketing Specialist
-                    <br></br>
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse text-2xl md:text-3xl font-bold text-gray-800 mb-6 leading-tight hover:scale-105 transition-transform duration-500">
+                    <br />
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse text-2xl md:text-3xl font-bold leading-tight">
                       Building Brands That Connect & Convert
                     </span>
                   </span>
@@ -199,7 +198,7 @@ export default function DigitalMarketingPortfolio() {
               </AnimatedText>
 
               <AnimatedText delay={600}>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-color duration-300">
+                <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-colors duration-300">
                   I help businesses scale their online presence through
                   data-driven digital marketing strategies, creative campaigns,
                   and measurable results.
@@ -267,18 +266,12 @@ export default function DigitalMarketingPortfolio() {
             </div>
 
             {/* Second Portion - User Photo */}
-            <div
-              className="lg:col-span-1 flex justify-center lg:justify-end items-center"
-              style={{
-                height: "500px",
-                marginTop: "-250px",
-                marginRight: "80px",
-              }}
-            >
-              <div className="relative w-[300px] h-[300px] ">
+            <div className="lg:col-span-1 flex justify-center lg:justify-end items-center">
+              <div className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] mt-8 lg:mt-[-150px] lg:mr-20">
                 <Image
                   src={imageLogo}
                   alt="Mahima - Digital Marketing Professional"
+                  className="rounded-full shadow-lg"
                 />
               </div>
             </div>
