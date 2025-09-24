@@ -19,7 +19,6 @@ import {
   Mail,
   MessageSquare,
   Phone,
-  Search,
   Target,
   TrendingUp,
   Users,
@@ -35,6 +34,7 @@ import jipsi from "@/assests/c1.jpg";
 import sunheraDhaga from "@/assests/c2.jpg";
 import JPM from "@/assests/c3.jpg";
 import landmark from "@/assests/c4.jpg";
+import { Search } from "lucide-react";
 
 // Custom hook for intersection observer
 function useIntersectionObserver(options = {}) {
@@ -285,26 +285,30 @@ export default function DigitalMarketingPortfolio() {
         className="py-16 px-4 bg-white transition-colors duration-500"
       >
         <div className="container mx-auto">
+          {/* Section Heading */}
           <div className="text-center mb-16">
             <AnimatedText>
               <Badge className="mb-4 bg-blue-100 text-blue-800 hover:scale-105 transition-transform duration-300">
                 Services
               </Badge>
             </AnimatedText>
+
             <AnimatedText delay={200}>
               <h2 className="text-4xl font-bold text-gray-800 mb-4 hover:scale-105 transition-transform duration-300">
                 What I Do Best
               </h2>
             </AnimatedText>
+
             <AnimatedText delay={400}>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-color duration-300">
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto hover:text-blue-800 transition-colors duration-300">
                 Regular updates on Facebook, Instagram to maintain visibility.
-                Meta ads, Instagram ads. get verified on google business. Make
+                Meta ads, Instagram ads. Get verified on Google Business. Make
                 your own place in the market.
               </p>
             </AnimatedText>
           </div>
 
+          {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -312,7 +316,7 @@ export default function DigitalMarketingPortfolio() {
                 title: "SEO & SEM",
                 description:
                   "Boost your search rankings and drive qualified traffic with strategic SEO and paid search campaigns.",
-                color: "blue",
+                gradient: "from-blue-500 to-blue-600",
                 features: [
                   "Keyword Research",
                   "On-Page Optimization",
@@ -324,7 +328,7 @@ export default function DigitalMarketingPortfolio() {
                 title: "Social Media Marketing",
                 description:
                   "Build brand awareness and engage your audience across all major social platforms.",
-                color: "purple",
+                gradient: "from-purple-500 to-purple-600",
                 features: [
                   "Content Strategy",
                   "Community Management",
@@ -336,51 +340,35 @@ export default function DigitalMarketingPortfolio() {
                 title: "Email Marketing",
                 description:
                   "Create personalized email campaigns that convert prospects into loyal customers.",
-                color: "green",
+                gradient: "from-green-500 to-green-600",
                 features: [
                   "Campaign Design",
                   "Automation Setup",
                   "Audience Segmentation",
                 ],
               },
-              // {
-              //   icon: BarChart3,
-              //   title: "Analytics & Reporting",
-              //   description: "Track performance and optimize campaigns with comprehensive data analysis.",
-              //   color: "orange",
-              //   features: ["Performance Tracking", "Custom Dashboards", "ROI Analysis"],
-              // },
-              // {
-              //   icon: Target,
-              //   title: "Content Marketing",
-              //   description: "Develop compelling content that attracts, engages, and converts your target audience.",
-              //   color: "red",
-              //   features: ["Content Strategy", "Blog Writing", "Video Marketing"],
-              // },
-              // {
-              //   icon: Zap,
-              //   title: "Conversion Optimization",
-              //   description: "Maximize your website's potential with data-driven conversion rate optimization.",
-              //   color: "indigo",
-              //   features: ["Landing Page Optimization", "User Experience Testing", "Funnel Analysis"],
-              // },
             ].map((service, index) => (
               <AnimatedText key={index} delay={index * 100}>
                 <Card className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border-0 shadow-lg bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50 cursor-pointer overflow-hidden relative blue-card blue-glow">
+                  {/* Hover background overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                   <CardHeader className="relative z-10">
                     <div
-                      className={`w-12 h-12 bg-gradient-to-r from-${service.color}-500 to-${service.color}-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
+                      className={`w-12 h-12 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
                     >
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
+
                     <CardTitle className="text-xl text-gray-800 group-hover:text-blue-600 group-hover:drop-shadow-sm transition-all duration-300">
                       {service.title}
                     </CardTitle>
+
                     <CardDescription className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
+
                   <CardContent className="relative z-10">
                     <ul className="space-y-2 text-sm text-gray-600">
                       {service.features.map((feature, featureIndex) => (
