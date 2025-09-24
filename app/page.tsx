@@ -250,16 +250,18 @@ export default function DigitalMarketingPortfolio() {
                       "Years of experience in SEO, SEM, Social Media & Email Marketing",
                   },
                 ].map((stat, index) => (
-                  <AnimatedText key={index} delay={1000 + index * 100}>
-                    <div className="text-center group cursor-pointer hover:scale-110 transition-all duration-300 p-4 rounded-lg hover:bg-blue-50">
-                      <div className="text-2xl md:text-3xl font-bold text-gray-800 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
-                        {stat.number}
+                  <div key={index} className="w-full">
+                    <AnimatedText delay={1000 + index * 100}>
+                      <div className="text-center group cursor-pointer hover:scale-110 transition-all duration-300 p-4 rounded-lg hover:bg-blue-50">
+                        <div className="text-2xl md:text-3xl font-bold text-gray-800 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
+                          {stat.number}
+                        </div>
+                        <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                          {stat.label}
+                        </div>
                       </div>
-                      <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                        {stat.label}
-                      </div>
-                    </div>
-                  </AnimatedText>
+                    </AnimatedText>
+                  </div>
                 ))}
               </div>
             </div>
