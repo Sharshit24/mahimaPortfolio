@@ -189,8 +189,11 @@ export default function DigitalMarketingPortfolio() {
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight hover:scale-105 transition-transform duration-500">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
                     {" "}
-                    Digital Marketing Specialist | Building Brands That Connect
-                    & Convert
+                    Digital Marketing Specialist
+                    <br></br>
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse text-2xl md:text-3xl font-bold text-gray-800 mb-6 leading-tight hover:scale-105 transition-transform duration-500">
+                      Building Brands That Connect & Convert
+                    </span>
                   </span>
                 </h1>
               </AnimatedText>
@@ -263,15 +266,13 @@ export default function DigitalMarketingPortfolio() {
 
             {/* Second Portion - User Photo */}
             <div
-              className="from-blue-100 to-purple-100 rounded-2xl p-6 flex items-start justify-center blue-card blue-glow"
-              style={{ height: "400px", marginTop: "-120px" }}
+              className="lg:col-span-1 flex justify-center lg:justify-end items-center"
+              style={{ height: "500px", marginTop: "-250px", marginRight: "80px" }}
             >
-              <div className="relative w-[350px] h-[350px] mt-[10px]">
+              <div className="relative w-[350px] h-[350px] ">
                 <Image
                   src={imageLogo}
                   alt="Mahima - Digital Marketing Professional"
-                  fill
-                  className="rounded-xl shadow-lg object-contain"
                 />
               </div>
             </div>
@@ -788,11 +789,7 @@ export default function DigitalMarketingPortfolio() {
               },
               {
                 title: "Contact Info",
-                items: [
-                  "bansal.mahima@gmail.com",
-                  "+1 (555) 123-4567",
-                  "New York, NY",
-                ],
+                items: ["bansal.mahima@gmail.com", "Visakhapatnam, India"],
               },
             ].map((section, index) => (
               <AnimatedText key={index} delay={200 + index * 100}>
