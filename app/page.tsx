@@ -232,7 +232,7 @@ export default function DigitalMarketingPortfolio() {
               </AnimatedText>
 
               {/* Enhanced Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   {
                     number: "50+",
@@ -267,7 +267,11 @@ export default function DigitalMarketingPortfolio() {
             {/* Second Portion - User Photo */}
             <div
               className="lg:col-span-1 flex justify-center lg:justify-end items-center"
-              style={{ height: "500px", marginTop: "-250px", marginRight: "80px" }}
+              style={{
+                height: "500px",
+                marginTop: "-250px",
+                marginRight: "80px",
+              }}
             >
               <div className="relative w-[350px] h-[350px] ">
                 <Image
