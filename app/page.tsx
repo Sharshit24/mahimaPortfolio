@@ -275,7 +275,7 @@ export default function DigitalMarketingPortfolio() {
                 marginRight: "80px",
               }}
             >
-              <div className="relative w-[350px] h-[350px] ">
+              <div className="relative w-[300px] h-[300px] ">
                 <Image
                   src={imageLogo}
                   alt="Mahima - Digital Marketing Professional"
