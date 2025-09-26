@@ -420,7 +420,7 @@ export default function DigitalMarketingPortfolio() {
             {[
               {
                 title: "JIPSI",
-                subtitle: " Multi location targeted Marketing",
+                subtitle: " Multi location Marketing",
                 gradient: "from-green-400 to-green-600",
                 image: jipsi,
               },
