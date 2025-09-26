@@ -423,28 +423,24 @@ export default function DigitalMarketingPortfolio() {
                 subtitle: " Multi location targeted Marketing",
                 gradient: "from-green-400 to-green-600",
                 image: jipsi,
-                link: "https://mahimaportfolio.vercel.app/#portfolio",
               },
               {
                 title: "JPM — NGO",
                 subtitle: "Multi-location Marketing",
                 gradient: "from-purple-400 to-purple-600",
                 image: JPM,
-                link: "https://mahimaportfolio.vercel.app/#portfolio",
               },
               {
                 title: "SunehraDhaga",
                 subtitle: "Multi-location Marketing",
                 gradient: "from-purple-400 to-purple-600",
                 image: sunheraDhaga,
-                link: "https://mahimaportfolio.vercel.app/#portfolio",
               },
               {
                 title: "Landmark Design Studio",
                 subtitle: "Hyperlocal marketing",
                 gradient: "from-purple-400 to-purple-600",
                 image: landmark,
-                link: "https://mahimaportfolio.vercel.app/#portfolio",
               },
             ].map((project, index) => (
               <AnimatedText key={index} delay={index * 200}>
